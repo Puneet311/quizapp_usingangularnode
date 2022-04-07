@@ -6,6 +6,12 @@ const fs = require('fs');
 app.use(express.json());
 app.use(cors());
 
+
+app.use(express.static(path.join(__dirname, 'public/dist/quizapp')));
+app.get("/",(req,res)=>{
+    res.sendFile(path.join(__dirname, "public/dist/quizapp/index.html"));
+  
+})
 app.get('/get-ques',(req,res)=>{
     fs.readFile('question.json', (err, data) => {
         if (err) res.status(500).send("not data found");
