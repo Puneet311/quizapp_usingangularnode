@@ -1,0 +1,24 @@
+{
+    "answerList": [
+        {
+            "correctOption": 0,
+            "hint": "capital of India is New Delhi"
+        },
+        {
+            "correctOption": 0,
+            "hint": "currency of India is Rupee"
+        },
+        {
+            "correctOption": 2,
+            "hint": "India played its first test on 25 June 1932"
+        },
+        {
+            "correctOption": 1,
+            "hint": "India has won 3 world cup"
+        },
+        {
+            "correctOption": 1,
+            "hint": "Kapil Dev was India's captain in 1983 world cup"
+        }
+    ]
+}

@@ -1,0 +1,53 @@
+{
+    "questionList": [
+        {
+            "question": "what is the capital of India?",
+            "options": [
+                "New Delhi",
+                "Mumbai",
+                "Noida",
+                "Ghaziabad"
+            ],
+            "marks": 2
+        },
+        {
+            "question": "what is a currency of India?",
+            "options": [
+                "Rupee",
+                "Dollar",
+                "Dinar",
+                "Rubal"
+            ],
+            "marks": 2
+        },
+        {
+            "question": "When did India play its First Test Match?",
+            "options": [
+                "26 June 1931",
+                "14 June 1930",
+                "25 June 1932",
+                "15 June 1933"
+            ],
+            "marks": 2
+        },
+        {
+            "question": "How many times did India win the Cricket World Cup?",
+            "options": [
+                "2 Times",
+                "3 Times",
+                "1 Times",
+                "4 Times"
+            ],
+            "marks": 2
+        }, {
+            "question": "Who was the Indian Captain when India won the Cricket World Cup in 1983?",
+            "options": [
+                "Sachin Tendulkar",
+                "Kapil Dev",
+                "Mahendra Singh Dhoni",
+                "Yuvraj Singh"
+            ],
+            "marks": 2
+        }
+    ]
+}

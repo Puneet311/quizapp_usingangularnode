@@ -1,0 +1,74 @@
+<div class="container">
+  <h3 #quiz class="mt-2">Welcome to the quiz!!</h3>
+  <p>Pls try to attempt all the question.</p>
+  <div class="mt-4 row aling-item-center">
+    <div class="col-md-8 offset-md-2">
+      <div class="card m-4" *ngFor="let ques of questionArray; let i = index">
+        <div class="card-header flex">
+          <p>
+            Ques {{ i + 1 }}. <span>{{ ques.question | titlecase }}</span>
+          </p>
+          <p>{{ ques.marks }} mark</p>
+        </div>
+        <ul class="list-group list-group-flush">
+          <li
+            class="list-group-item"
+            *ngFor="let option of ques.options; let j = index"
+          >
+            <div class="form-check cursor-pointer">
+              <input
+                class="form-check-input cursor-pointer"
+                type="radio"
+                name="{{ i }}"
+                value="{{ j }}"
+                (change)="selectAnswer(i, j)"
+              />
+              <label class="form-check-label cursor-pointer">
+                {{ option }}
+              </label>
+            </div>
+          </li>
+        </ul>
+        <div class="card m-2" *ngIf="showResult">
+          <div class="card-header">
+            <div
+              [ngClass]="correctAnswerArray[i].isCorrect ? 'correct' : 'wrong'"
+            >
+              <p *ngIf="correctAnswerArray[i].isCorrect">
+                Your Answer is correct!!!
+              </p>
+              <p *ngIf="!correctAnswerArray[i].isCorrect">
+                Your Answer is Wrong!!!
+              </p>
+              <p>Hint: {{ correctAnswerArray[i].hint }}</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <button
+        class="btn btn-primary m-4"
+        *ngIf="!showResult"
+        (click)="submitAnswer()"
+      >
+        Submit
+      </button>
+    </div>
+  </div>
+  <div #score class="row aling-item-center m-4" *ngIf="showResult">
+    <div class="card col-md-8 offset-md-2">
+      <h2 class="m-4 text-success text-center">Your Score card</h2>
+      <div class="h4">
+        <p>No. of Question Attempted = {{ questionAttempted }}</p>
+        <p>Total correct answers = {{ correctAnswers }}</p>
+        <p>Total worng answers = {{ wrongAnswers }}</p>
+        <hr />
+        <div class="flex">
+          <p class="text-danger display-6">Total score = {{ totalScore }}</p>
+          <button class="btn btn-secondary col-md-2" (click)="retake()">
+            Retake test
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
